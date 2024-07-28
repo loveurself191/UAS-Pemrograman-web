@@ -35,7 +35,7 @@
     <section class="contactForm">
       <div class="form">
         <h2>Tanya Kami</h2>
-        <form action="https://" >
+        <form action="form" >
           <fieldset>
           <legend></legend>
           <div class="kotak">
@@ -73,20 +73,22 @@
         }
     </script>
     <script>
-      function sendToWhatsapp(){
-        var number = "+6281804872094";
-        
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var message = document.getElementById('message').value;
-        
-        var url = "https://wa.me/" +number+ "?text="
-        + "*Name :*" +name+ "%0a"
-        + "*Name :*" +email+ "%0a"
-        + "*Name :*" +message+ "%0a%0a"
-        
-        window.open(url, '_blank').focus();
-      }
+      document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+    
+    var phoneNumber = '6281804872094';
+    
+    var whatsappMessage = `Nama: ${name}\nEmail: ${email}\nPesan: ${message}`;
+    
+    var encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    var whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, '_blank');
+});      
     </script>
 </body>
 </html>
