@@ -24,10 +24,12 @@
           </div>
           <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
+    </section>
+    
     <section class="contactForm">
       <div class="form">
         <h2>Tanya Kami</h2>
-        <form action="form" >
+        <form id="form" >
           <fieldset>
           <p>
           <label>Nama:</label>
@@ -44,7 +46,7 @@
           <button type="submit" >Kirim</button>
           </fieldset>
         </form>
-      </div>
+        </div>
     </section>
     <section class="contact">
       <h2>Kontak</h2>
@@ -77,16 +79,18 @@
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;
     var message = document.getElementById('message').value;
-    
-    var phoneNumber = '6281804872094';
+
+    var phoneNumber = '6281804872094'; 
     
     var whatsappMessage = `Nama: ${name}\nEmail: ${email}\nPesan: ${message}`;
-    
+  
     var encodedMessage = encodeURIComponent(whatsappMessage);
     
     var whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappURL, '_blank');
-});      
+});
+
+      
     </script>
 </body>
 </html>
