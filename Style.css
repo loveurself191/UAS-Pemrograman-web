@@ -111,19 +111,34 @@ nav .fa{
 
 }
 .about{
-    width: 100%;
-    margin: auto;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.about2{
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    
+    
 }
 .about h2{
     padding-top: 50px;
 }
-.about nav{
-    padding: 20px;
-    background-color: navy;
-    color: #fff;
-}
+
 h2{
     font-size: 36px;
     font-weight: 600;
@@ -135,26 +150,47 @@ iframe{
 .about h3{
     font-size: 12px;
     font-weight: 600;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 main {
     padding: 20px;
 }
-table{
-    text-align: left;
-    font-size: 25px;
-    padding: 50px 0px;
-    margin: 50px 150px;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
-table td{
-    padding: 20px 20px;
-    border: 1px solid black;
+
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+td:first-child {
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+
+td:last-child {
+    background-color: #fafafa;
 }
 .about p{
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     font-size: 10px;
     text-align: left;
-    padding: 40px;
+    line-height: 1.6;
 }
+.about ul {
+    margin: 0 0 15px 20px;
+    padding: 0;
+    list-style-type: disc;
+}
+
+.about li {
+    margin-bottom: 10px;
+}
+
 @media(max-width: 700px){
     table{
         flex-direction: column;
@@ -183,9 +219,6 @@ table td{
         padding: 20px;
         margin: 0;
     }
-    table{
-        margin: 0px -20px;
-    }
     .about{
         margin-top: -20px;
     }
@@ -194,56 +227,54 @@ table td{
     font-size: 10px;
     text-align: left;
 }
-footer {
-    text-align: center;
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-
-.news-item {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-}
 
 .form {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.form h2{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 50px;
-    font-size: 30px;
-    height: auto;
-    
 }
-
 label {
-    margin: 10px 0 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
-input{
-    border: 1px solid black;
+input, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
 }
-
 textarea {
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
+    height: 100px;
+    resize: vertical;
 }
-
-.form button {
-    margin-top: 10px;
-    margin-bottom: 50px;
+button {
     padding: 10px;
-    background: #333;
-    color: #fff;
+    background-color: #28a745;
     border: none;
+    color: white;
     border-radius: 5px;
+    font-size: 1em;
     cursor: pointer;
-    justify-content: center;
+    transition: background-color(0.3 ease);
+}
+button:hover {
+    background-color: #218838;
 }
 .contact {
     color: white;
@@ -254,9 +285,15 @@ textarea {
 }
 .contactForm{
     background-color: #fff;
-}
-label {
-    color: black;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 .contact h2{
     font-size: 40px;
@@ -302,24 +339,38 @@ label {
         font-size: 10px;
     }
 }
-.footer{
-    font-size: 5px;
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 20px 20px;
-    color: white;
-    background-color: black;
+    border-top: 5px solid #f4f4f4;
 }
-.footer img{
-    width: 100px;
-    height: 80px;
-    padding-bottom: 0;
+
+.footer img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 15px;
 }
-.footer h3{
-    padding: 20px;
+
+.footer h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: normal;
 }
-.footer div{
-    padding: 20px;
+
+.footer hr {
+    width: 60%;
+    border: 0;
+    border-top: 1px solid #555;
+    margin: 20px auto;
 }
+
+.footer div {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
 .contactMenu nav{
     padding: 20px;
     background-color: navy;
